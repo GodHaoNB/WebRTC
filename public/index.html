@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .none {
+            -webkit-filter: none;
+        }
+
+        .blur {
+            -webkit-filter: blur(3px);
+        }
+
+        .grayscale {
+            -webkit-filter: grayscale(1);
+        }
+
+        .invert {
+            -webkit-filter: invert(1);
+        }
+
+        .sepia {
+            -webkit-filter: sepia(1);
+        }
+
+        .box {
+
+            display: flex;
+            justify-content: left;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        button {
+            width: 80px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Hello Word</h1>
+        <div id="audioList"></div>
+        <div id="videoList"></div>
+        <div id="filter">
+            <select name="filter" id="filter">
+                <option value="none" selected>none</option>
+                <option value="blur">blur</option>
+                <option value="grayscale">grayscale</option>
+                <option value="invert">invert</option>
+                <option value="sepia">sepia</option>
+            </select>
+        </div>
+        <div>
+            <button id="btnSanpShop">tag sanpshop</button>
+        </div>
+        <div>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div>
+            <audio autoplay controls id="audioplayer"></audio>
+            <video autoplay playsinline id="player"></video>
+            <table>
+                <tr>
+                    <td>
+                        <video autoplay playsinline id="player"></video>
+                    </td>
+                    <td>
+                        <video playsinline id="recpplayer"></video>
+                    </td>
+                    <td>
+                        <div id="constranints" class="output"> </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button id="record">start record</button>
+                    </td>
+                    <td>
+                        <button id="recplay" disabled>recplay</button>
+                    </td>
+                    <td>
+                        <button id="download" disabled>download</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script src="./js/client.js"></script>
+</body>
+
+</html>
